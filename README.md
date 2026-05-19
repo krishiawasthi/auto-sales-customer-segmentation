@@ -53,12 +53,16 @@ data/raw/Auto sales data.csv
 auto-sales-customer-segmentation/
 │
 ├── scripts/
-│   └── Cluster_Analysis.R
+│   ├── Conjoint_Analysis.R
+│   ├── Cluster_Analysis.R
+│   └── Discriminant_Analysis.R
 │
 ├── outputs/
 │   ├── elbow_curve.png
 │   ├── cluster_plot.png
-│   └── cluster_assignments.csv
+│   ├── cluster_assignments.csv
+│   ├── conjoint_attribute_importance.png
+│   └── discriminant_confusion_matrix.csv
 │
 ├── data/
 │   └── raw/
@@ -127,6 +131,9 @@ The project generates the following output files:
 outputs/elbow_curve.png
 outputs/cluster_plot.png
 outputs/cluster_assignments.csv
+conjoint_attribute_importance.png
+discriminant_confusion_matrix.csv
+
 ```
 
 ### Output Descriptions
@@ -148,7 +155,7 @@ outputs/cluster_assignments.csv
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/krishiawasthi/auto-sales-customer-segmentation.git
+git clone <your-repository-url>
 ```
 
 2. Open the project folder in RStudio.
@@ -168,7 +175,9 @@ data/raw/
 5. Open the R script:
 
 ```text
+scripts/Conjoint_Analysis.R
 scripts/Cluster_Analysis.R
+scripts/Discriminant_Analysis.R
 ```
 
 6. Make sure the dataset file path in the script is correct:
