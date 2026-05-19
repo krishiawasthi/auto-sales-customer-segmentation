@@ -1,0 +1,7 @@
+library(MASS)
+df$STATUS <- as.factor(df$STATUS)  
+lda_model <- lda(STATUS ~ QUANTITYORDERED + SALES + PRICEEACH, data = df)
+print(lda_model)
+lda_predictions <- predict(lda_model)
+head(lda_predictions$class)
+table(Predicted = lda_predictions$class, Actual = df$STATUS)
