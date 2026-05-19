@@ -43,3 +43,10 @@ fviz_cluster(kmeans_model, data = df_scaled,
              palette = "jco",
              ggtheme = theme_minimal())
 print(kmeans_model$centers)
+if (!dir.exists("outputs")) {
+  dir.create("outputs")
+}
+
+write.csv(df[, c("CUSTOMERNAME", "Cluster")], 
+          "outputs/cluster_assignments.csv", 
+          row.names = FALSE)
